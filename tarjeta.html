@@ -23,16 +23,6 @@
                env(safe-area-inset-left);
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: -15%;
-      background: url("tarjeta/tarjeta.png") center / cover no-repeat;
-      filter: blur(45px) brightness(1.4) saturate(1.1);
-      opacity: 0.25;
-      z-index: 0;
-    }
-
     .card {
       position: relative;
       z-index: 1;
@@ -185,7 +175,6 @@
     const tag = document.getElementById("nombre-tag");
     if (invitados) {
       tag.textContent = invitados;
-      /* pequeño delay para que aparezca suave tras la animación de entrada */
       setTimeout(() => tag.classList.add("show"), 600);
     }
 
@@ -200,7 +189,6 @@
 
     btn.addEventListener("click", function(e) {
 
-      /* Ripple */
       const rect = card.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height) * 0.65;
       const rpl  = document.createElement("span");
@@ -214,11 +202,9 @@
       card.appendChild(rpl);
       setTimeout(() => rpl.remove(), 800);
 
-      /* Abrir tarjeta y reproducir vídeo */
       card.classList.add("open");
       video.play().catch(() => {});
 
-      /* ── Redirigir CONSERVANDO invitados y pases ── */
       setTimeout(() => {
         window.location.href = destino;
       }, 5000);
