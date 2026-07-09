@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Invitación D &amp; V</title>
+  <title>Invitación Mis XV años</title>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #180d26;
+      background: #07112b;
       overflow: hidden;
       font-family: Georgia, serif;
       padding: env(safe-area-inset-top)
@@ -153,119 +153,16 @@
       opacity: 0;
       transition: opacity 0.4s ease;
     }
-
-    /* ── Royal envelope fallback design ── */
-    .card-fallback {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #241635 0%, #0e0618 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      text-align: center;
-      z-index: 1;
-      border: 3px double #d0af58;
-      box-shadow: inset 0 0 80px rgba(208, 175, 88, 0.15);
-      transition: filter 0.9s ease, transform 0.9s ease;
-    }
-    .card.open .card-fallback {
-      filter: brightness(0.2) blur(8px);
-      transform: scale(1.08);
-    }
-    .card-fallback-inner {
-      border: 1px solid rgba(208, 175, 88, 0.18);
-      padding: 32px 16px;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-    .cf-names {
-      font-family: 'Great Vibes', cursive, Georgia, serif;
-      font-weight: 400;
-      font-size: clamp(48px, 12vw, 78px);
-      color: #f4ebd0;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-      line-height: .95;
-      margin-bottom: 12px;
-    }
-    .cf-amp {
-      font-family: 'Great Vibes', cursive, Georgia, serif;
-      font-size: clamp(32px, 6vw, 44px);
-      color: #d0af58;
-      display: block;
-      margin: -4px 0;
-    }
-    .cf-title {
-      font-family: Georgia, serif;
-      font-size: clamp(13px, 3vw, 16px);
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin: 20px 0 40px;
-      opacity: 0.85;
-    }
-    .cf-seal {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 24px;
-      animation: pulseSeal 2s ease-in-out infinite;
-    }
-    @keyframes pulseSeal {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(208, 175, 88, 0.3)); }
-      50% { transform: scale(1.06); filter: drop-shadow(0 0 16px rgba(208, 175, 88, 0.6)); }
-    }
-    .cf-cta {
-      font-family: Georgia, serif;
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #d0af58;
-      text-transform: uppercase;
-      border: 1px solid rgba(208, 175, 88, 0.35);
-      padding: 8px 20px;
-      background: rgba(208,175,88,0.03);
-      margin-top: auto;
-    }
   </style>
 
   <!-- Fuente script para el nombre (misma que index.html) -->
-  <link href="https://fonts.googleapis.com/css2 family=Great Vibes&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="card" id="card">
 
-    <!-- Fallback envelope displayed dynamically if image file is transparent, empty or fails -->
-    <div class="card-fallback" id="card-fallback">
-      <div class="card-fallback-inner">
-        <h1 class="cf-names" style="font-size: clamp(38px, 10vw, 62px); margin-bottom: 24px;">
-          Sofia Valeria
-        </h1>
-        <p class="cf-title" style="margin-top: 10px; margin-bottom: 30px;">Mis 15 Años</p>
-        
-        <!-- Beautiful pulsing wax seal SVG -->
-        <div class="cf-seal">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-            <path d="M100 12 C51 12, 12 51, 12 100 C12 149, 51 188, 100 188 C149 188, 188 149, 188 100 C188 51, 149 12, 100 12 Z" fill="#d0af58" opacity="0.1" />
-            <circle cx="100" cy="100" r="76" stroke="#d0af58" stroke-width="3" fill="#180d26" />
-            <circle cx="100" cy="100" r="70" stroke="#d0af58" stroke-width="1" stroke-dasharray="6 4" />
-            <text x="100" y="108" font-family="'Great Vibes', cursive, Georgia, serif" font-size="64" fill="#f4ebd0" text-anchor="middle">S &amp; V</text>
-            <path d="M62 136 C72 144, 128 144, 138 136" stroke="#d0af58" stroke-width="2.2" stroke-linecap="round" />
-            <path d="M100 32 L102 38 L108 40 L102 42 L100 48 L98 42 L92 40 L98 38 Z" fill="#d0af58" />
-          </svg>
-        </div>
-
-        <div class="cf-cta">Tocar Para Abrir</div>
-      </div>
-    </div>
-
-    <!-- Fallback check overlay: if image exists, image fits cleanly on top -->
-    <img src="tarjeta/tarjeta.png" alt="Invitación Sofia Valeria" draggable="false" id="tarjeta-img" style="position: absolute; inset:0; z-index: 2;">
+    <img src="tarjeta/tarjeta.png" alt="Invitación Mis XV años" draggable="false">
 
     <video id="video" playsinline preload="metadata">
       <source src="tarjeta/tarjeta.mp4" type="video/mp4">
@@ -274,50 +171,34 @@
     <!-- Nombre del invitado sobre la tarjeta -->
     <div class="nombre-tag" id="nombre-tag"></div>
 
-    <button class="btn" id="btn" aria-label="Abrir invitación" style="z-index: 3;"></button>
+    <button class="btn" id="btn" aria-label="Abrir invitación"></button>
 
   </div>
 
   <script>
     /* ── 1. Leer los parámetros de la URL ── */
-    const params  = new URLSearchParams(window.location.search);
-    const familia = params.get("familia") || "";
-    const pases   = params.get("pases")   || "1";
+    const params    = new URLSearchParams(window.location.search);
+    const invitados = params.get("invitados") || "";
+    const pases     = params.get("pases")     || "1";
 
     /* ── 2. Mostrar nombre del invitado en la tarjeta ── */
     const tag = document.getElementById("nombre-tag");
-    if (familia) {
-      tag.textContent = familia;
+    if (invitados) {
+      tag.textContent = invitados;
       /* pequeño delay para que aparezca suave tras la animación de entrada */
       setTimeout(() => tag.classList.add("show"), 600);
     }
 
     /* ── 3. Construir la URL de destino CON los parámetros ── */
-    const destino = "index.html?familia=" + encodeURIComponent(familia)
-                                + "&pases=" + encodeURIComponent(pases);
+    const destino = "index.html?invitados=" + encodeURIComponent(invitados)
+                                  + "&pases=" + encodeURIComponent(pases);
 
     /* ── 4. Lógica del botón ── */
     const card  = document.getElementById("card");
     const video = document.getElementById("video");
     const btn   = document.getElementById("btn");
-    const tImg  = document.getElementById("tarjeta-img");
-
-    /* Hide image overlay if file is empty / broken */
-    tImg.addEventListener("error", () => {
-      tImg.style.display = "none";
-    });
-    // Double check on load for empty file
-    setTimeout(() => {
-      if (tImg.complete && (tImg.naturalWidth === 0 || tImg.naturalHeight === 0)) {
-        tImg.style.display = "none";
-      }
-    }, 400);
-
-    let isTransitioning = false;
 
     btn.addEventListener("click", function(e) {
-      if (isTransitioning) return;
-      isTransitioning = true;
 
       /* Ripple */
       const rect = card.getBoundingClientRect();
@@ -328,24 +209,19 @@
         width:  size + "px",
         height: size + "px",
         left:   (e.clientX - rect.left  - size / 2) + "px",
-        top:    (e.clientY - rect.top   - size / 2) + "px",
-        zIndex: "4"
+        top:    (e.clientY - rect.top   - size / 2) + "px"
       });
       card.appendChild(rpl);
       setTimeout(() => rpl.remove(), 800);
 
-      /* Abrir tarjeta y reproducir vídeo si es válido */
+      /* Abrir tarjeta y reproducir vídeo */
       card.classList.add("open");
-      
-      let playTriggered = false;
-      video.play()
-        .then(() => { playTriggered = true; })
-        .catch(() => {});
+      video.play().catch(() => {});
 
-      /* ── Redirigir CONSERVANDO familia y pases con tiempo dinámico inteligente ── */
+      /* ── Redirigir CONSERVANDO invitados y pases ── */
       setTimeout(() => {
         window.location.href = destino;
-      }, playTriggered ? 4800 : 1300); //snappy transition if no video can play!
+      }, 5000);
     });
   </script>
 
