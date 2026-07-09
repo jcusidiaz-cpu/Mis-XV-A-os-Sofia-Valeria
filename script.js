@@ -6,10 +6,10 @@
 const SHEETS_URL = "https://script.google.com/macros/s/AKfycbznLTOjEZI_jRwvOFQi0zcs0vWJN2hihLt1fncRk8xou7QsdCkAXHFRs2aLdeOn8gNvng/exec"
 /* ══════════════════════════════════════════════════════════
    PARÁMETROS DE LA URL
-   Ejemplo de enlace: index.html?familia=García&pases=4
+   Ejemplo de enlace: index.html?invitados=García&pases=4
 ══════════════════════════════════════════════════════════ */
 const params  = new URLSearchParams(window.location.search);
-const FAMILIA = params.get("familia") || "Invitado";
+const FAMILIA = params.get("invitados") || "Invitado";
 const PASES   = parseInt(params.get("pases")) || 1;
 
 // Muestra el pase en la tarjeta
