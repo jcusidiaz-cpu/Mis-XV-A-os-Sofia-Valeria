@@ -116,7 +116,7 @@
       to { transform: scale(4.5); opacity: 0; }
     }
 
-    /* ── Nombre del invitado flotante (arriba) ── */
+    /* ── Nombre del invitado flotante (arriba, dorado) ── */
     .nombre-tag {
       position: absolute;
       top: 24px;
@@ -124,8 +124,8 @@
       text-align: center;
       font-family: 'Great Vibes', cursive, Georgia, serif;
       font-size: clamp(22px, 6vw, 38px);
-      color: rgba(20,20,20,0.85);
-      text-shadow: 0 2px 10px rgba(255,255,255,0.7);
+      color: #d0af58;
+      text-shadow: 0 2px 10px rgba(255,255,255,0.9), 0 1px 3px rgba(0,0,0,0.15);
       letter-spacing: 1px;
       pointer-events: none;
       opacity: 0;
@@ -174,7 +174,8 @@
     /* ── 2. Mostrar nombre del invitado en la tarjeta ── */
     const tag = document.getElementById("nombre-tag");
     if (invitados) {
-      tag.textContent = invitados;
+      tag.textContent = "Para: " + invitados;
+      /* pequeño delay para que aparezca suave tras la animación de entrada */
       setTimeout(() => tag.classList.add("show"), 600);
     }
 
@@ -189,6 +190,7 @@
 
     btn.addEventListener("click", function(e) {
 
+      /* Ripple */
       const rect = card.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height) * 0.65;
       const rpl  = document.createElement("span");
@@ -202,9 +204,11 @@
       card.appendChild(rpl);
       setTimeout(() => rpl.remove(), 800);
 
+      /* Abrir tarjeta y reproducir vídeo */
       card.classList.add("open");
       video.play().catch(() => {});
 
+      /* ── Redirigir CONSERVANDO invitados y pases ── */
       setTimeout(() => {
         window.location.href = destino;
       }, 5000);
