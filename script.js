@@ -125,7 +125,7 @@ function seek(e) {
    CUENTA REGRESIVA
    ⚠️ Cambia la fecha/hora por la de la fiesta de XV años
 ══════════════════════════════════════════════════════════ */
-const EVENTO = new Date("2026-08-01T17:00:00");
+const EVENTO = new Date("2026-08-01T18:30:00");
 function tick() {
   const diff = EVENTO - new Date();
   if (diff <= 0) { ["cd-d","cd-h","cd-m","cd-s"].forEach(id => document.getElementById(id).textContent = "0"); return; }
